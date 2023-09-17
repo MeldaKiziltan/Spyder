@@ -38,22 +38,25 @@ const verifyEnvs = (email, password, deviceId) => {
       });
     console.log("Logged in");
 
-    // neurosity.kinesis("leftThumbFinger").subscribe((intent) => {
-    //     //console.log("Hello World!");
-    //     robot.keyToggle('space', 'down');
-    //     setTimeout(() => {
-    //     robot.keyToggle('space', 'up');
-    //     }, 2000);
-    //     console.log("jump!");
-    // });
-
-    neurosity.kinesis("leftArm").subscribe((intent) => {
-        // console.log("Intent: ", intent);
-        console.log("Left Arm");
+    neurosity.kinesis("moveBackward").subscribe((intent) => {
+        console.log("Intent: ", intent);
+        console.log("Backwards!");
     });
 
-   
+    neurosity.kinesis("moveForward").subscribe((intent) => {
+        console.log("Intent: ", intent);
+        console.log("Onwards!");
+    });
 
+    neurosity.kinesis("rotateLeft").subscribe((intent) => {
+        console.log("Intent: ", intent);
+        console.log("Leftie loosey");
+    });
+
+    // neurosity.kinesis("leftArm").subscribe((intent) => {
+    //     console.log("Intent: ", intent);
+    //     console.log("Left Arm");
+    // });
 
   };
   
