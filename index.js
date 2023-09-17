@@ -38,20 +38,25 @@ const verifyEnvs = (email, password, deviceId) => {
       });
     console.log("Logged in");
 
-    neurosity.kinesis("moveBackward").subscribe((intent) => {
-        console.log("Intent: ", intent);
-        console.log("Backwards!");
-    });
+    // neurosity.kinesis("moveBackward").subscribe((intent) => {
+    //     console.log("Intent: ", intent);
+    //     console.log("Backwards!");
+    // });
 
-    neurosity.kinesis("moveForward").subscribe((intent) => {
+    // subscription.unsubscribe();
+
+    neurosity.kinesis("moveForward", "moveBackward").subscribe((intent) => {
         console.log("Intent: ", intent);
         console.log("Onwards!");
     });
 
-    neurosity.kinesis("rotateLeft").subscribe((intent) => {
-        console.log("Intent: ", intent);
-        console.log("Leftie loosey");
-    });
+    // sub2.unsubscribe();
+
+    // neurosity.kinesis("rotateLeft").subscribe((intent) => {
+    //     console.log("Intent: ", intent);
+    //     console.log("Leftie loosey");
+    // });
+
 
     // neurosity.kinesis("leftArm").subscribe((intent) => {
     //     console.log("Intent: ", intent);
@@ -61,3 +66,66 @@ const verifyEnvs = (email, password, deviceId) => {
   };
   
   main();
+
+//   const two = async () => {
+//     await neurosity
+//       .login({
+//         email,
+//         password
+//       })
+//       .catch((error) => {
+//         console.log(error); 
+//         throw new Error(error);
+//       });
+//     console.log("Logged in");
+
+//     // neurosity.kinesis("moveBackward").subscribe((intent) => {
+//     //     console.log("Intent: ", intent);
+//     //     console.log("Backwards!");
+//     // });
+
+//     neurosity.kinesis("moveForward").subscribe((intent) => {
+//         console.log("Intent: ", intent);
+//         console.log("Onwards!");
+//     });
+
+//     // neurosity.kinesis().pipe()
+
+//     // neurosity.kinesis("rotateLeft").subscribe((intent) => {
+//     //     console.log("Intent: ", intent);
+//     //     console.log("Leftie loosey");
+//     // });
+
+
+// }
+
+// const three = async () => {
+//     await neurosity
+//       .login({
+//         email,
+//         password
+//       })
+//       .catch((error) => {
+//         console.log(error); 
+//         throw new Error(error);
+//       });
+//     console.log("Logged in");
+
+//     // neurosity.kinesis("moveBackward").subscribe((intent) => {
+//     //     console.log("Intent: ", intent);
+//     //     console.log("Backwards!");
+//     // });
+
+//     // neurosity.kinesis("moveForward").subscribe((intent) => {
+//     //     console.log("Intent: ", intent);
+//     //     console.log("Onwards!");
+//     // });
+
+//     neurosity.kinesis("rotateLeft").subscribe((intent) => {
+//         console.log("Intent: ", intent);
+//         console.log("Leftie loosey");
+//     });
+// }
+
+// two();
+// three();
