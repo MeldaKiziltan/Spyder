@@ -21,6 +21,8 @@
   "dependencies": {
     "@neurosity/sdk": "^6.5.7",
     "dotenv": "^16.0.3",
-    "robotjs": "^0.6.0"
+    "robotjs": "^0.6.0",
+    "websocket": "^1.0.34",
+    "ws": "^8.14.1"
   }
 }

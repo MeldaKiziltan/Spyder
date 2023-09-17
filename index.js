@@ -1,6 +1,7 @@
 const { Neurosity } = require("@neurosity/sdk");
 const robot = require('robotjs');
 require("dotenv").config();
+const WebSocket = require('ws');
 
 // Grabbing environment variables for login and device info
 const deviceId = process.env.DEVICE_ID || "";
@@ -42,10 +43,10 @@ const verifyEnvs = (email, password, deviceId) => {
     console.log("Logged in");
 
     // Trained actions via Kinesis API and Neurosity SDK
-    neurosity.kinesis("moveForward").subscribe((intent) => {
+    neurosity.kinesis("rotateClockwise").subscribe((intent) => {
         console.log("Intent: ", intent);
-        webSocket.send('drive,0.3')
-        console.log("Onwards!");
+        webSocket.send('drive,0.3');
+        console.log("Clock");
     });
 
     // neurosity.kinesis("moveBackward").subscribe((intent) => {
