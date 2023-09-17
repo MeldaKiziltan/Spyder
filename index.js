@@ -7,6 +7,8 @@ const deviceId = process.env.DEVICE_ID || "";
 const email = process.env.EMAIL || "";
 const password = process.env.PASSWORD || "";
 
+const webSocket = new WebSocket('ws://10.33.136.125:8081/ws');
+
 const verifyEnvs = (email, password, deviceId) => {
     const invalidEnv = (env) => {
       return env === "" || env === 0;
@@ -42,6 +44,7 @@ const verifyEnvs = (email, password, deviceId) => {
     // Trained actions via Kinesis API and Neurosity SDK
     neurosity.kinesis("moveForward").subscribe((intent) => {
         console.log("Intent: ", intent);
+        webSocket.send('drive,0.3')
         console.log("Onwards!");
     });
 
