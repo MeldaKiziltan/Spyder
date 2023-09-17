@@ -1,0 +1,26 @@
+{
+  "name": "eeg_gamepad",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChrisSamra/eeg_gamepad.git"
+  },
+  "author": "Chris Samra",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ChrisSamra/eeg_gamepad/issues"
+  },
+  "homepage": "https://github.com/ChrisSamra/eeg_gamepad#readme",
+  "keywords": [],
+  "description": "",
+  "dependencies": {
+    "@neurosity/sdk": "^6.5.7",
+    "dotenv": "^16.0.3",
+    "robotjs": "^0.6.0"
+  }
+}
