@@ -80,6 +80,8 @@ func reader(conn *websocket.Conn) {
 		wdog.Kick()
 	})
 	defer wdog.Stop()
+	defer drive.Stop(context.Background(), nil)
+	defer steering.Stop(context.Background(), nil)
 
 	for {
 		// read in a message
