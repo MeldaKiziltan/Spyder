@@ -1,2 +1,4 @@
 node_modules
 .env
+panda_app/panda
+.gitignore
