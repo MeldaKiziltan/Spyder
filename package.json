@@ -1,5 +1,5 @@
 {
-  "name": "eeg_gamepad",
+  "name": "spyder",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ChrisSamra/eeg_gamepad.git"
+    "url": "git+https://github.com/MeldaKiziltan/Spyder.git"
   },
-  "author": "Chris Samra",
+  "author": "Melda Kiziltan",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ChrisSamra/eeg_gamepad/issues"
+    "url": "https://github.com/MeldaKiziltan/Spyder/issues"
   },
-  "homepage": "https://github.com/ChrisSamra/eeg_gamepad#readme",
+  "homepage": "https://github.com/MeldaKiziltan/Spyder#spyder",
   "keywords": [],
   "description": "",
   "dependencies": {
